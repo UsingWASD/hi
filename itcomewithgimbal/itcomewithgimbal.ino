@@ -42,8 +42,8 @@ void loop() {
     adjustment = -angle; // ccw
     servoAngle = 90 + wantangle + adjustment;
   }
-  Serial.print("adjustment angle: ");
-  Serial.println(adjustment);
+  Serial.print("servo angle: ");
+  Serial.println(servoAngle);
 
   servoAngle = constrain(servoAngle, 0, 180);
   spinny.write(servoAngle);
